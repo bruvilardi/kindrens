@@ -107,7 +107,7 @@ const PRODUCT_DATA: Record<number, {
     image: "https://res.cloudinary.com/drvtrbeky/image/upload/v1768624625/frascolimao_icj9to.png",
     hoverImage: "https://res.cloudinary.com/drvtrbeky/image/upload/v1768624625/Gemini_Generated_Image_lahrmklahrmklahr_kxzarv.png",
     heroBackground: "https://res.cloudinary.com/drvtrbeky/image/upload/v1768624746/Ativo_26_2x_w22jdy.png",
-    accentColor: "#F4E87C",
+    accentColor: "#f2c50c",
     accentClass: "text-yellow-500", 
     bgClass: "bg-accent-lemon/20",
     benefit1: "Zesty Taste",
@@ -348,7 +348,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ productId, onBack }) => {
       </section>
 
       {/* How It Works */}
-      <section className="py-32 bg-cream-medium relative overflow-hidden">
+      <section className="py-32 bg-[#fffbf6] relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6">
            <h2 className="text-3xl md:text-4xl font-bold text-center text-primary-text mb-16">How It Works</h2>
            

@@ -3,11 +3,11 @@ import { Facebook, Instagram, Youtube } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-cream-medium pt-32 pb-16 px-6 border-t-[3px] border-cream-dark">
+    <footer className="bg-[#edd9c8] pt-32 pb-16 px-6 border-t-[3px] border-cream-dark">
       <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
         
         {/* Subscribe Section */}
-        <div className="mb-12 w-full">
+        <div id="subscribe" className="mb-12 w-full">
           <h2 className="text-3xl font-bold text-primary-text mb-2">
             Subscribe & Save
           </h2>

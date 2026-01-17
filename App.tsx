@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Products from './components/Products';
 import WhyUs from './components/WhyUs';
+import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import ProductDetail from './components/ProductDetail';
 
@@ -29,6 +30,7 @@ const App: React.FC = () => {
             <Hero />
             <Products onProductClick={(id) => handleNavigate('product-detail', id)} />
             <WhyUs />
+            <FAQ />
           </>
         ) : (
           <ProductDetail 
