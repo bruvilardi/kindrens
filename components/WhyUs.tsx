@@ -3,7 +3,7 @@ import { Heart, ThumbsUp, Smile } from 'lucide-react';
 
 const WhyUs: React.FC = () => {
   return (
-    <section className="py-32 px-6 bg-accent-green/20">
+    <section className="py-32 px-6 bg-cream">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-primary-text mb-16">
           Why Parents Love Us

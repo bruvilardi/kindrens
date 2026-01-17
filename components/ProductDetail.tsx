@@ -348,7 +348,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ productId, onBack }) => {
       </section>
 
       {/* How It Works */}
-      <section className="py-32 bg-cream relative overflow-hidden">
+      <section className="py-32 bg-cream-medium relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6">
            <h2 className="text-3xl md:text-4xl font-bold text-center text-primary-text mb-16">How It Works</h2>
            
@@ -447,7 +447,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ productId, onBack }) => {
       </section>
 
       {/* FAQ */}
-      <section className="py-32 bg-white">
+      <section className="py-32 bg-cream">
         <div className="max-w-3xl mx-auto px-6">
             <h2 className="text-3xl font-bold text-center text-primary-text mb-12">Frequently Asked Questions</h2>
             <div className="space-y-4">

@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
       {/* Background Image */}
       <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
         <img 
-          src="https://res.cloudinary.com/drvtrbeky/image/upload/v1768629160/Ativo_31_2x_hwvlvt.png" 
+          src="https://res.cloudinary.com/drvtrbeky/image/upload/v1768670156/Ativo_32_2x_ozyeii.png" 
           alt="Hero Background" 
           className="w-full h-full object-cover object-center"
         />
@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
           <div className="pt-6">
             <button 
               onClick={scrollToProducts}
-              className="bg-[#ec681c] hover:bg-[#ec681c]/90 text-primary-text border-[3px] border-primary-text font-bold py-3 px-8 rounded-full shadow-sm transform hover:-translate-y-1 transition-all duration-200 text-lg"
+              className="bg-[#8cc046] hover:bg-[#8cc046]/90 text-primary-text border-[3px] border-primary-text font-bold py-3 px-8 rounded-full shadow-sm transform hover:-translate-y-1 transition-all duration-200 text-lg"
             >
               Shop All Flavors
             </button>

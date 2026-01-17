@@ -3,7 +3,7 @@ import { Facebook, Instagram, Youtube } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#FFF9EE] pt-32 pb-16 px-6 border-t-[3px] border-[#FFF0D0]">
+    <footer className="bg-cream-medium pt-32 pb-16 px-6 border-t-[3px] border-cream-dark">
       <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
         
         {/* Subscribe Section */}

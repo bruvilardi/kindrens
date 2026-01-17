@@ -56,7 +56,7 @@ const Products: React.FC<ProductsProps> = ({ onProductClick }) => {
   ];
 
   return (
-    <section id="products" className="py-32 px-6 bg-white">
+    <section id="products" className="py-32 px-6 bg-cream-medium">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-center text-primary-text mb-12">
           Our Products
