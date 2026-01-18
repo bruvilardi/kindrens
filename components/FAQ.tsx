@@ -28,9 +28,9 @@ const FAQ: React.FC = () => {
   ];
 
   return (
-    <section id="faq" className="py-32 px-6 bg-[#fbeee2]">
+    <section id="faq" className="py-16 md:py-32 px-6 bg-[#fbeee2]">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-primary-text mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-primary-text mb-8 md:mb-12">
           Frequently Asked Questions
         </h2>
         
@@ -44,11 +44,11 @@ const FAQ: React.FC = () => {
                 className="w-full px-6 py-5 flex items-center justify-between text-left font-bold text-primary-text hover:bg-cream/50 transition-colors"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <span className="text-lg">{faq.question}</span>
+                <span className="text-base md:text-lg">{faq.question}</span>
                 {openIndex === index ? (
-                  <ChevronUp className="w-6 h-6 text-accent-salmon" />
+                  <ChevronUp className="w-6 h-6 text-accent-salmon flex-shrink-0 ml-4" />
                 ) : (
-                  <ChevronDown className="w-6 h-6 text-primary-text/40" />
+                  <ChevronDown className="w-6 h-6 text-primary-text/40 flex-shrink-0 ml-4" />
                 )}
               </button>
               
@@ -57,7 +57,7 @@ const FAQ: React.FC = () => {
                   openIndex === index ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className="px-6 pb-6 text-primary-text/70 leading-relaxed border-t-2 border-primary-text/5">
+                <div className="px-6 pb-6 text-primary-text/70 leading-relaxed border-t-2 border-primary-text/5 text-sm md:text-base">
                   {faq.answer}
                 </div>
               </div>

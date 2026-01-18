@@ -3,12 +3,12 @@ import { Facebook, Instagram, Youtube } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#edd9c8] pt-32 pb-16 px-6 border-t-[3px] border-cream-dark">
+    <footer className="bg-[#edd9c8] pt-16 md:pt-32 pb-8 md:pb-16 px-6 border-t-[3px] border-cream-dark">
       <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
         
         {/* Subscribe Section */}
         <div id="subscribe" className="mb-12 w-full">
-          <h2 className="text-3xl font-bold text-primary-text mb-2">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary-text mb-2">
             Subscribe & Save
           </h2>
           <p className="text-primary-text/80 mb-6 text-sm font-medium">
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
             </a>
           </div>
 
-          <div className="w-full flex justify-between items-end border-t border-transparent pt-4 px-4 md:px-0">
+          <div className="w-full flex flex-col md:flex-row justify-between items-center md:items-end border-t border-transparent pt-4 px-4 md:px-0 gap-4 md:gap-0">
              <div className="flex space-x-6 text-xs font-bold text-primary-text">
                 <a href="#" className="hover:text-accent-salmon">Legal</a>
                 <a href="#" className="hover:text-accent-salmon">Terms</a>

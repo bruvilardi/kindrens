@@ -203,14 +203,14 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ productId, onBack }) => {
         <button 
           onClick={onBack}
           className="flex items-center text-primary-text font-bold hover:opacity-70 transition-opacity"
-          style={{ color: product.accentColor }} // Dynamic hover color via inline style or class logic
+          style={{ color: product.accentColor }} 
         >
           <ArrowLeft className="w-5 h-5 mr-2" /> Back to Shop
         </button>
       </div>
 
       {/* Product Hero */}
-      <section className="relative w-full py-20 pb-32 overflow-hidden">
+      <section className="relative w-full py-12 md:py-20 pb-16 md:pb-32 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
            <img 
@@ -221,23 +221,23 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ productId, onBack }) => {
            <div className="absolute inset-0 bg-cream/30 md:bg-transparent"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center pt-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center pt-8">
           
           {/* Left: Image Gallery */}
           <div className="flex flex-col items-center">
-            <div className="relative w-full max-w-[500px] aspect-square flex items-center justify-center bg-white/50 rounded-[40px] border-[3px] border-primary-text shadow-xl mb-6 backdrop-blur-sm">
+            <div className="relative w-full max-w-[320px] md:max-w-[500px] aspect-square flex items-center justify-center bg-white/50 rounded-[40px] border-[3px] border-primary-text shadow-xl mb-6 backdrop-blur-sm">
                <img 
                  src={currentImage} 
                  alt={product.name} 
                  className="w-3/4 h-3/4 object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
                />
                <div 
-                 className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full flex items-center justify-center text-white font-bold rotate-12 shadow-lg border-[3px] border-primary-text"
+                 className="absolute -bottom-4 -right-2 md:-bottom-6 md:-right-6 w-24 h-24 md:w-32 md:h-32 rounded-full flex items-center justify-center text-white font-bold rotate-12 shadow-lg border-[3px] border-primary-text"
                  style={{ backgroundColor: product.accentColor }}
                >
                  <div className="text-center leading-tight">
-                   <span className="text-2xl block">30</span>
-                   <span className="text-sm">Gummies</span>
+                   <span className="text-xl md:text-2xl block">30</span>
+                   <span className="text-xs md:text-sm">Gummies</span>
                  </div>
                </div>
             </div>
@@ -246,36 +246,36 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ productId, onBack }) => {
             <div className="flex space-x-4">
                 <button 
                   onClick={() => setCurrentImage(product.image)}
-                  className={`w-20 h-20 rounded-xl border-[3px] flex items-center justify-center bg-white/80 backdrop-blur-sm transition-all hover:scale-105 ${currentImage === product.image ? '' : 'border-primary-text/10'}`} 
+                  className={`w-16 h-16 md:w-20 md:h-20 rounded-xl border-[3px] flex items-center justify-center bg-white/80 backdrop-blur-sm transition-all hover:scale-105 ${currentImage === product.image ? '' : 'border-primary-text/10'}`} 
                   style={{ borderColor: currentImage === product.image ? product.accentColor : undefined }}
                 >
-                    <img src={product.image} alt="Thumb 1" className="w-12 h-auto" />
+                    <img src={product.image} alt="Thumb 1" className="w-10 md:w-12 h-auto" />
                 </button>
                 <button 
                   onClick={() => setCurrentImage(product.hoverImage)}
-                  className={`w-20 h-20 rounded-xl border-[3px] flex items-center justify-center bg-white/80 backdrop-blur-sm transition-all hover:scale-105 ${currentImage === product.hoverImage ? '' : 'border-primary-text/10'}`}
+                  className={`w-16 h-16 md:w-20 md:h-20 rounded-xl border-[3px] flex items-center justify-center bg-white/80 backdrop-blur-sm transition-all hover:scale-105 ${currentImage === product.hoverImage ? '' : 'border-primary-text/10'}`}
                   style={{ borderColor: currentImage === product.hoverImage ? product.accentColor : undefined }}
                 >
-                    <img src={product.hoverImage} alt="Thumb 2" className="w-12 h-auto" />
+                    <img src={product.hoverImage} alt="Thumb 2" className="w-10 md:w-12 h-auto" />
                 </button>
             </div>
           </div>
 
           {/* Right: Sales Copy */}
-          <div className="space-y-6">
+          <div className="space-y-6 text-center md:text-left">
             <div>
-              <div className="flex items-center space-x-1 mb-2">
+              <div className="flex items-center justify-center md:justify-start space-x-1 mb-2">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 ))}
                 <span className="text-primary-text/60 text-sm font-bold ml-2">(1,204 Reviews)</span>
               </div>
-              <h1 className="text-5xl font-bold text-primary-text mb-2">{product.name}</h1>
-              <p className="text-xl text-primary-text/70 font-medium">{product.description}</p>
+              <h1 className="text-3xl md:text-5xl font-bold text-primary-text mb-2">{product.name}</h1>
+              <p className="text-lg md:text-xl text-primary-text/70 font-medium">{product.description}</p>
             </div>
 
             {/* Price & Toggle */}
-            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-3xl shadow-sm border-[3px] border-primary-text space-y-6">
+            <div className="bg-white/90 backdrop-blur-sm p-4 md:p-6 rounded-3xl shadow-sm border-[3px] border-primary-text space-y-6 text-left">
               
               <div className="flex flex-col space-y-3">
                 <label 
@@ -291,11 +291,11 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ productId, onBack }) => {
                         {isSubscribe && <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: product.accentColor }} />}
                     </div>
                     <div>
-                        <span className="font-bold block text-primary-text">Subscribe & Save</span>
+                        <span className="font-bold block text-primary-text text-sm md:text-base">Subscribe & Save</span>
                         <span className="text-xs font-bold" style={{ color: product.accentColor }}>Save 15%</span>
                     </div>
                   </div>
-                  <span className="text-xl font-bold text-primary-text">$21.24</span>
+                  <span className="text-lg md:text-xl font-bold text-primary-text">$21.24</span>
                 </label>
 
                 <label 
@@ -310,20 +310,20 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ productId, onBack }) => {
                     <div className={`w-5 h-5 rounded-full border-2 mr-3 flex items-center justify-center border-primary-text`}>
                         {!isSubscribe && <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: product.accentColor }} />}
                     </div>
-                    <span className="font-bold text-primary-text">One-time Purchase</span>
+                    <span className="font-bold text-primary-text text-sm md:text-base">One-time Purchase</span>
                   </div>
-                  <span className="text-xl font-bold text-primary-text">$24.99</span>
+                  <span className="text-lg md:text-xl font-bold text-primary-text">$24.99</span>
                 </label>
               </div>
 
               <button 
-                className="w-full text-primary-text border-[3px] border-primary-text text-xl font-bold py-4 rounded-full shadow-lg transform active:scale-95 transition-all flex items-center justify-center gap-2 hover:brightness-110"
+                className="w-full text-primary-text border-[3px] border-primary-text text-lg md:text-xl font-bold py-4 rounded-full shadow-lg transform active:scale-95 transition-all flex items-center justify-center gap-2 hover:brightness-110"
                 style={{ backgroundColor: product.accentColor }}
               >
                 Add to Cart <ShoppingCart className="w-6 h-6" />
               </button>
 
-              <div className="flex justify-center space-x-8 text-primary-text/70 text-sm font-bold">
+              <div className="flex flex-wrap justify-center gap-4 md:space-x-8 text-primary-text/70 text-sm font-bold">
                  <div className="flex flex-col items-center">
                     <div className="bg-accent-green/30 p-2 rounded-full mb-1 border-2 border-primary-text"><ShieldCheck size={20}/></div>
                     <span>Non-GMO</span>
@@ -339,7 +339,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ productId, onBack }) => {
               </div>
             </div>
 
-            <div className="text-sm text-primary-text/60 leading-relaxed">
+            <div className="text-xs md:text-sm text-primary-text/60 leading-relaxed text-center md:text-left">
               * These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.
             </div>
 
@@ -348,9 +348,9 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ productId, onBack }) => {
       </section>
 
       {/* How It Works */}
-      <section className="py-32 bg-[#fffbf6] relative overflow-hidden">
+      <section className="py-16 md:py-32 bg-[#fffbf6] relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6">
-           <h2 className="text-3xl md:text-4xl font-bold text-center text-primary-text mb-16">How It Works</h2>
+           <h2 className="text-3xl md:text-4xl font-bold text-center text-primary-text mb-12 md:mb-16">How It Works</h2>
            
            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
               {/* Connecting Line (Desktop) */}
@@ -373,7 +373,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ productId, onBack }) => {
       </section>
 
       {/* Product Details & Supplement Facts */}
-      <section className={`py-32 ${product.bgClass}`}>
+      <section className={`py-16 md:py-32 ${product.bgClass}`}>
         <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
             
             {/* Supplement Facts Table */}
@@ -407,17 +407,17 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ productId, onBack }) => {
 
             {/* Info Tabs */}
             <div>
-                 <div className="flex space-x-4 border-b-2 border-primary-text/10 mb-6">
+                 <div className="flex space-x-4 border-b-2 border-primary-text/10 mb-6 overflow-x-auto">
                     <button 
                         onClick={() => setActiveTab('details')}
-                        className={`pb-2 font-bold text-lg transition-colors ${activeTab === 'details' ? 'border-b-4' : 'text-primary-text/40'}`}
+                        className={`pb-2 font-bold text-lg transition-colors whitespace-nowrap ${activeTab === 'details' ? 'border-b-4' : 'text-primary-text/40'}`}
                         style={{ borderColor: activeTab === 'details' ? product.accentColor : 'transparent', color: activeTab === 'details' ? product.accentColor : undefined }}
                     >
                         Product Details
                     </button>
                     <button 
                          onClick={() => setActiveTab('ingredients')}
-                        className={`pb-2 font-bold text-lg transition-colors ${activeTab === 'ingredients' ? 'border-b-4' : 'text-primary-text/40'}`}
+                        className={`pb-2 font-bold text-lg transition-colors whitespace-nowrap ${activeTab === 'ingredients' ? 'border-b-4' : 'text-primary-text/40'}`}
                         style={{ borderColor: activeTab === 'ingredients' ? product.accentColor : 'transparent', color: activeTab === 'ingredients' ? product.accentColor : undefined }}
                     >
                         Ingredients
@@ -447,7 +447,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ productId, onBack }) => {
       </section>
 
       {/* FAQ */}
-      <section className="py-32 bg-cream">
+      <section className="py-16 md:py-32 bg-cream">
         <div className="max-w-3xl mx-auto px-6">
             <h2 className="text-3xl font-bold text-center text-primary-text mb-12">Frequently Asked Questions</h2>
             <div className="space-y-4">

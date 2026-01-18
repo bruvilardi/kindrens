@@ -56,9 +56,9 @@ const Products: React.FC<ProductsProps> = ({ onProductClick }) => {
   ];
 
   return (
-    <section id="products" className="py-32 px-6 bg-cream-medium">
+    <section id="products" className="py-16 md:py-32 px-6 bg-cream-medium">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-primary-text mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-primary-text mb-8 md:mb-12">
           Our Products
         </h2>
 
@@ -75,13 +75,13 @@ const Products: React.FC<ProductsProps> = ({ onProductClick }) => {
                         <img 
                           src={product.image} 
                           alt={product.title}
-                          className={`max-h-[230px] object-contain transition-opacity duration-300 ${product.hoverImage ? 'group-hover:opacity-0' : ''}`}
+                          className={`max-h-[180px] md:max-h-[230px] object-contain transition-opacity duration-300 ${product.hoverImage ? 'group-hover:opacity-0' : ''}`}
                         />
                         {product.hoverImage && (
                           <img 
                             src={product.hoverImage} 
                             alt={`${product.title} Hover`}
-                            className="absolute inset-0 m-auto max-h-[230px] object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                            className="absolute inset-0 m-auto max-h-[180px] md:max-h-[230px] object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                           />
                         )}
                      </div>
