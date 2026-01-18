@@ -39,7 +39,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
           <img 
             src="https://res.cloudinary.com/drvtrbeky/image/upload/v1768533938/logo_kqtanf.svg" 
             alt="Kildren's Logo" 
-            className="h-[40px] md:h-[50px] w-auto transition-all duration-300" 
+            className="h-[36px] md:h-[45px] w-auto transition-all duration-300" 
           />
         </div>
         
